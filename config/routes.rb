@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_page/home'
-  get 'static_page/about'
-  resources :micro_posts
+  resources :posts
   get 'static_pages/help'
   get 'static_pages/about'
 
