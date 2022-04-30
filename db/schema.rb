@@ -10,15 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_430_035_040) do
-  create_table 'posts', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'price'
-    t.datetime 'date'
-    t.text 'memo'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.string 'trade_to'
-    t.string 'trade_from'
+ActiveRecord::Schema.define(version: 2022_04_30_121303) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "ancestry"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
+
+  create_table "micro_posts", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.datetime "date"
+    t.text "memo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.datetime "date"
+    t.text "memo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "trade_to"
+    t.string "trade_from"
+  end
+
 end
