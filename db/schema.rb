@@ -13,17 +13,8 @@
 ActiveRecord::Schema.define(version: 2022_04_30_121303) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "ancestry"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "micro_posts", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
-    t.datetime "date"
-    t.text "memo"
+    t.string "ancestry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
